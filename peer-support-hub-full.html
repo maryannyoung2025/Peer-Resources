@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peer Support Resource Hub</title>
+<meta name="theme-color" content="#1f2a30">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif; background:#0f1417; color:#e9ecef; }
+  header { position: sticky; top: 0; z-index: 1000; background: linear-gradient(180deg, #1f2a30, #162026); padding: 14px 16px 10px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  header h1 { margin: 0 0 6px; font-size: 18px; font-weight: 800; }
+  .sub { font-size: 12px; opacity: .8; }
+  .search-wrap { margin-top: 10px; position: relative; }
+  .search-wrap input { width: 100%; padding: 12px 40px 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: #0c1114; color:#fff; font-size: 15px; outline: none; }
+  .search-wrap .icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); opacity: .6; }
+  .crisis-bar { position: sticky; top: 72px; z-index: 999; display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); padding: 10px 12px; background: #0f1417; border-bottom: 1px solid rgba(255,255,255,.06); }
+  @media (min-width: 520px) { .crisis-bar { grid-template-columns: repeat(6, 1fr); } }
+  .pill { display:flex; align-items:center; justify-content:center; gap:8px; padding: 10px; border-radius: 12px; text-decoration:none; color:#fff; font-weight: 700; font-size:14px; border:1px solid rgba(255,255,255,.12); background:#122029; }
+  .pill small { display:block; font-size:11px; opacity:.8; }
+  main { padding: 12px; padding-bottom: 100px; }
+  .section { background: #121a1f; border:1px solid rgba(255,255,255,.08); border-radius: 14px; margin: 10px 0 14px; overflow: hidden; }
+  .accordion { width: 100%; text-align: left; border: none; background: transparent; color:#fff; padding: 14px; font-size: 16px; font-weight: 800; display:flex; justify-content:space-between; align-items:center; }
+  .accordion .tag { font-size: 11px; opacity: .75; }
+  .chev { transition: transform .2s; }
+  .accordion[aria-expanded="true"] .chev { transform: rotate(90deg); }
+  .panel { display: none; padding: 4px 14px 14px; }
+  .grid { display: grid; gap: 8px; grid-template-columns: 1fr; }
+  @media (min-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  .card { background: #0f171b; border:1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 12px; }
+  .card h4 { margin: 0 0 6px; font-size: 14px; }
+  .links { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 8px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.12); background:#0d161a; padding:10px 12px; border-radius:10px; font-weight:700; font-size: 13px; }
+  footer { position: fixed; left:0; right:0; bottom:0; background: #10171b; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px; font-size: 12px; opacity:.8; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Peer Support Resource Hub</h1>
+  <div class="sub">Neutral EMS style • Tap to call, text, or open resources • Save to Home Screen for quick access</div>
+  <div class="search-wrap"><input id="search" type="search" placeholder="Search topics (e.g., grief, addiction, WCB)…"><div class="icon">🔎</div></div>
+</header>
+<nav class="crisis-bar">
+  <a class="pill" href="tel:911">🚨 911</a>
+  <a class="pill" href="sms:211">📲 211</a>
+  <a class="pill" href="tel:211">📞 211</a>
+  <a class="pill" href="sms:988">🧠 988</a>
+  <a class="pill" href="tel:1-855-512-4127">🤝 Peer Line</a>
+  <a class="pill" href="tel:1-833-456-4566">🌙 Talk Suicide</a>
+</nav>
+<main>
+  <section class="section"><button class="accordion">🧠 Mental Health <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-303-2642">AB Mental Health Line</a><a class="btn" href="https://www.pspnet.ca/en/for-psp">PSPNet</a></div></div></section>
+  <section class="section"><button class="accordion">⚡ Event-Related Stress <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-855-512-4127">Peer Support Line</a><a class="btn" href="https://botgalberta.com/">Boots on the Ground</a></div></div></section>
+  <section class="section"><button class="accordion">💗 Grief & Loss <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-833-894-2476">ACIPN</a><a class="btn" href="https://memorialgrant.ca/">Memorial Grant</a></div></div></section>
+  <section class="section"><button class="accordion">💸 Financial <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://hsaa.ca/member-resources/benefits/bursaries-scholarships/emergency-financial-assistance-fund">Emergency Funds</a></div></div></section>
+  <section class="section"><button class="accordion">👪 Family & Relationships <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.pspnet.ca/en/for-families-of-psp">PSPNet Families</a><a class="btn" href="https://al-anon.ab.ca/">Al-Anon</a></div></div></section>
+  <section class="section"><button class="accordion">🧩 Substance Use <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.aa.org/">AA</a><a class="btn" href="https://na.org/">NA</a><a class="btn" href="tel:1-866-332-2322">Addiction Helpline</a></div></div></section>
+  <section class="section"><button class="accordion">🧭 Career Transitions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://homeweb.ca/app/en/resources/category/permalink/lifestyle/career-development">Homeweb Career</a></div></div></section>
+  <section class="section"><button class="accordion">🛡️ Bullying & Harassment <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-855-443-5722">Abuse Helpline</a><a class="btn" href="tel:1-888-456-2323">Bullying Helpline</a></div></div></section>
+  <section class="section"><button class="accordion">🏥 Illness & Injury <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.wcb.ab.ca/treatment-and-recovery/specialized-injury-support/">WCB</a></div></div></section>
+  <section class="section"><button class="accordion">🌱 Isolation & Loneliness <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.headspace.com/app">Headspace</a><a class="btn" href="https://sentioapp.com/en/download-app">Sentio</a></div></div></section>
+</main>
+<footer>Tip: Add to your phone’s Home Screen for one-tap access</footer>
+<script>
+  document.querySelectorAll('.accordion').forEach(btn=>{
+    btn.addEventListener('click',()=>{const p=btn.nextElementSibling;const ex=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!ex);p.style.display=ex?'none':'block';});
+  });
+  document.getElementById('search').addEventListener('input',e=>{
+    const q=e.target.value.toLowerCase();
+    document.querySelectorAll('.section').forEach(sec=>{sec.style.display=sec.innerText.toLowerCase().includes(q)?'':'none';});
+  });
+</script>
+</body>
+</html>
