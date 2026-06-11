@@ -12,25 +12,16 @@
   header h1 { margin: 0 0 6px; font-size: 18px; font-weight: 800; }
   .sub { font-size: 12px; opacity: .8; }
   .search-wrap { margin-top: 10px; position: relative; }
-  .search-wrap input { width: 100%; padding: 12px 40px 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: #0c1114; color:#fff; font-size: 15px; outline: none; transition: border-color .2s; }
-  .search-wrap input:focus { border-color: rgba(255,255,255,.3); }
-  .search-wrap .icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); opacity: .6; pointer-events: none; }
-  .search-wrap .clear-btn { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #fff; opacity: .6; cursor: pointer; font-size: 18px; padding: 4px; display: none; }
-  .search-wrap .clear-btn:hover { opacity: 1; }
-  .search-wrap .clear-btn.show { display: block; }
-  .search-results { margin-top: 8px; font-size: 12px; opacity: .7; height: 18px; }
+  .search-wrap input { width: 100%; padding: 12px 40px 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: #0c1114; color:#fff; font-size: 15px; outline: none; }
+  .search-wrap .icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); opacity: .6; }
   .crisis-bar { position: sticky; top: 72px; z-index: 999; display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); padding: 10px 12px; background: #0f1417; border-bottom: 1px solid rgba(255,255,255,.08); }
   @media (min-width: 520px) { .crisis-bar { grid-template-columns: repeat(6, 1fr); } }
   .pill { display:flex; align-items:center; justify-content:center; gap:8px; padding: 10px; border-radius: 12px; text-decoration:none; color:#fff; font-weight: 700; font-size:14px; border:1px solid rgba(255,255,255,.12); background:#0d161a; }
   .pill:hover { background: #162026; border-color: rgba(255,255,255,.2); }
   .pill small { display:block; font-size:11px; opacity:.8; }
   main { padding: 12px; padding-bottom: 100px; }
-  .no-results { text-align: center; padding: 60px 20px; opacity: .6; }
-  .no-results div { font-size: 48px; margin-bottom: 12px; }
-  .section { background: #121a1f; border:1px solid rgba(255,255,255,.08); border-radius: 14px; margin: 10px 0 14px; overflow: hidden; transition: opacity .2s; }
-  .section.hidden { display: none; }
+  .section { background: #121a1f; border:1px solid rgba(255,255,255,.08); border-radius: 14px; margin: 10px 0 14px; overflow: hidden; }
   .accordion { width: 100%; text-align: left; border: none; background: transparent; color:#fff; padding: 14px; font-size: 16px; font-weight: 800; display:flex; justify-content:space-between; align-items:center; cursor: pointer; }
-  .accordion:hover { background: rgba(255,255,255,.03); }
   .accordion .tag { font-size: 11px; opacity: .75; }
   .chev { transition: transform .2s; }
   .accordion[aria-expanded="true"] .chev { transform: rotate(90deg); }
@@ -40,7 +31,7 @@
   .card { background: #0f171b; border:1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 12px; }
   .card h4 { margin: 0 0 6px; font-size: 14px; }
   .links { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 8px; }
-  .btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.12); background:#0d161a; padding:10px 12px; border-radius:10px; font-weight: 600; font-size: 13px; transition: all .2s; }
+  .btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.12); background:#0d161a; padding:10px 12px; border-radius:10px; font-weight: 600; font-size: 13px; }
   .btn:hover { border-color: rgba(255,255,255,.25); background: #0f1f25; }
   footer { position: fixed; left:0; right:0; bottom:0; background: #10171b; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px; font-size: 12px; opacity:.8; }
 </style>
@@ -48,103 +39,44 @@
 <body>
 <header>
   <h1>Peer Support Resource Hub</h1>
-  <div>• Tap to call, text, or open resources • Save to Home Screen for quick access</div>
-  <div class="search-wrap">
-    <input id="search" type="search" placeholder="Search topics (e.g., grief, addiction, WCB)…" aria-label="Search resources">
-    <button class="clear-btn" id="clearSearch" aria-label="Clear search" type="button">✕</button>
-    <div class="icon">🔎</div>
-  </div>
-  <div class="search-results" id="searchResults"></div>
+<div>• Tap to call, text, or open resources • Save to Home Screen for quick access</div>
+  <div class="search-wrap"><input id="search" type="search" placeholder="Search topics (e.g., grief, addiction, WCB)…"><div class="icon">🔎</div></div>
 </header>
 <nav class="crisis-bar">
   <a class="pill" href="tel:911">🚨 9-1-1</a>
-  <a class="pill" href="sms:211">📲 2-1-1</a>
+  <a class="pill" href="sms:211">📲 2-1-1 </a>
   <a class="pill" href="tel:988">🧠 9-8-8</a>
+  
   <a class="pill" href="tel:1-833-456-4566">🌙 Talk Suicide</a>
 </nav>
 <main>
-  <section class="section"><button class="accordion" aria-expanded="false">🧠 Mental Health <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-303-2642">☎️ 1-877-303-2642</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">⚡ Event-Related Stress <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-844-297-4673">📞 EH Support Line</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">💗 Grief & Loss <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-833-456-4566">📱 Talk Suicide</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">💸 Financial <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://hsaa.ca">💼 HSAA</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">👪 Family & Relationships <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-800-668-6868">👥 Family Line</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🧩 Addictions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.aadac.com">🤝 AADAC</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🧭 Career Transitions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="http://career.org">💼 Career Line</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🛡️ Bullying & Harassment <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-888-997-2833">⚠️ Bullying Support</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🏥 Illness & Injury <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.albertahealthservices.ca">🏥 AHS</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🌱 Isolation & Loneliness <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-888-925-1386">🌍 Connection Line</a></div></div></section>
+  <section class="section"><button class="accordion">🧠 Mental Health <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-303-2642"> Mental Health Line</a></div></div></section>
+  <section class="section"><button class="accordion">⚡ Event-Related Stress <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-273-3134">EHS Line</a></div></div></section>
+  <section class="section"><button class="accordion">💗 Grief & Loss <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-833-894-2476">ACIPN</a></div></div></section>
+  <section class="section"><button class="accordion">💸 Financial <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://hsaa.ca/member-resources/">HSAA</a></div></div></section>
+  <section class="section"><button class="accordion">👪 Family & Relationships <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.pspnet.ca/">PSPNet</a></div></div></section>
+  <section class="section"><button class="accordion">🧩 Addictions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.aa.org/">AA</a><a class="btn" href="https://www.aadac.com/">AADAC</a></div></div></section>
+  <section class="section"><button class="accordion">🧭 Career Transitions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://homeweb.ca/app/">HomeWeb</a></div></div></section>
+  <section class="section"><button class="accordion">🛡️ Bullying & Harassment <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-855-443-5746">Bullying Line</a></div></div></section>
+  <section class="section"><button class="accordion">🏥 Illness & Injury <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.wcb.ab.ca/training">WCB</a></div></div></section>
+  <section class="section"><button class="accordion">🌱 Isolation & Loneliness <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.headversus.com/">HeadVersus</a></div></div></section>
 </main>
 <footer>Tip: Add to your phone's Home Screen (Safari: Share → Add to Home Screen • Chrome: ⋮ → Add to Home Screen)</footer>
 <script>
-  const searchInput = document.getElementById('search');
-  const clearBtn = document.getElementById('clearSearch');
-  const searchResults = document.getElementById('searchResults');
-  const allSections = document.querySelectorAll('.section');
-  let searchTimeout;
-
-  // Accordion functionality
-  document.querySelectorAll('.accordion').forEach(btn => {
-    btn.addEventListener('click', () => {
+  document.querySelectorAll('.accordion').forEach(btn=>{
+    btn.addEventListener('click',()=>{
       const p = btn.nextElementSibling;
-      const ex = btn.getAttribute('aria-expanded') === 'true';
+      const ex = btn.getAttribute('aria-expanded')==='true';
       btn.setAttribute('aria-expanded', !ex);
       p.style.display = ex ? 'none' : 'block';
     });
   });
-
-  // Enhanced search with debouncing and visual feedback
-  searchInput.addEventListener('input', (e) => {
-    clearTimeout(searchTimeout);
-    const query = e.target.value.trim().toLowerCase();
-    
-    // Show/hide clear button
-    clearBtn.classList.toggle('show', query.length > 0);
-    
-    // Debounce search to reduce lag while typing
-    searchTimeout = setTimeout(() => performSearch(query), 150);
-  });
-
-  // Clear button click handler
-  clearBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchInput.value = '';
-    clearBtn.classList.remove('show');
-    performSearch('');
-    searchInput.focus();
-  });
-
-  // Escape key to clear
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      searchInput.value = '';
-      clearBtn.classList.remove('show');
-      performSearch('');
-    }
-  });
-
-  function performSearch(query) {
-    let visibleCount = 0;
-    
-    allSections.forEach(sec => {
-      const text = sec.innerText.toLowerCase();
-      const matches = query === '' || text.includes(query);
-      
-      sec.classList.toggle('hidden', !matches);
-      if (matches) visibleCount++;
+  document.getElementById('search').addEventListener('input', e=>{
+    const q = e.target.value.toLowerCase();
+    document.querySelectorAll('.section').forEach(sec=>{
+      sec.style.display = sec.innerText.toLowerCase().includes(q) ? '' : 'none';
     });
-
-    // Update results counter
-    if (query.length > 0) {
-      searchResults.textContent = `${visibleCount} result${visibleCount !== 1 ? 's' : ''} found`;
-      
-      // Show "no results" message if nothing found
-      if (visibleCount === 0) {
-        searchResults.textContent = 'No resources found';
-      }
-    } else {
-      searchResults.textContent = '';
-    }
-  }
+  });
 </script>
 </body>
 </html>
