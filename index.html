@@ -12,16 +12,16 @@
   header h1 { margin: 0 0 6px; font-size: 18px; font-weight: 800; }
   .sub { font-size: 12px; opacity: .8; }
   .search-wrap { margin-top: 10px; position: relative; }
-  .search-wrap input { width: 100%; padding: 12px 40px 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: #0c1114; color:#fff; font-size: 15px; outline: none; transition: border-color .2s; }
+  .search-wrap input { width: 100%; padding: 12px 40px 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: #0c1114; color:#fff; font-size: 15px; outline: none; transition: all .2s; }
   .search-wrap input:focus { border-color: rgba(255,255,255,.3); }
   .search-wrap .icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); opacity: .6; pointer-events: none; }
-  .search-wrap .clear-btn { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #fff; opacity: .6; cursor: pointer; font-size: 18px; padding: 0; display: none; }
+  .search-wrap .clear-btn { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #fff; opacity: .6; cursor: pointer; font-size: 18px; padding: 4px; }
   .search-wrap .clear-btn:hover { opacity: 1; }
   .search-wrap .clear-btn.show { display: block; }
   .search-results { margin-top: 8px; font-size: 12px; opacity: .7; height: 18px; }
   .crisis-bar { position: sticky; top: 72px; z-index: 999; display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); padding: 10px 12px; background: #0f1417; border-bottom: 1px solid rgba(255,255,255,.08); }
   @media (min-width: 520px) { .crisis-bar { grid-template-columns: repeat(6, 1fr); } }
-  .pill { display:flex; align-items:center; justify-content:center; gap:8px; padding: 10px; border-radius: 12px; text-decoration:none; color:#fff; font-weight: 700; font-size:14px; border:1px solid rgba(255,255,255,.08); transition: all .15s; }
+  .pill { display:flex; align-items:center; justify-content:center; gap:8px; padding: 10px; border-radius: 12px; text-decoration:none; color:#fff; font-weight: 700; font-size:14px; border:1px solid rgba(255,255,255,.12); }
   .pill:hover { background: #162026; border-color: rgba(255,255,255,.2); }
   .pill small { display:block; font-size:11px; opacity:.8; }
   main { padding: 12px; padding-bottom: 100px; }
@@ -40,7 +40,7 @@
   .card { background: #0f171b; border:1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 12px; }
   .card h4 { margin: 0 0 6px; font-size: 14px; }
   .links { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 8px; }
-  .btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.12); background:#0d161a; padding:10px 12px; border-radius:10px; font-weight:500; font-size:13px; transition: all .15s; }
+  .btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#fff; border:1px solid rgba(255,255,255,.12); background:#0d161a; padding:10px 12px; border-radius:10px; font-weight: 600; font-size: 14px; transition: all .2s; }
   .btn:hover { border-color: rgba(255,255,255,.25); background: #0f1f25; }
   footer { position: fixed; left:0; right:0; bottom:0; background: #10171b; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px; font-size: 12px; opacity:.8; }
 </style>
@@ -63,16 +63,16 @@
   <a class="pill" href="tel:1-833-456-4566">🌙 Talk Suicide</a>
 </nav>
 <main>
-  <section class="section"><button class="accordion" aria-expanded="false">🧠 Mental Health <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-303-2642">Mental Health Line</a><a class="btn" href="https://www.pspnet.ca/en/for-psp">PSPNet</a><a class="btn" href="https://www.cipsrt-icrtsp.ca/en/self-assessment-tool">CIPSRT Self Assessment</a><a class="btn" href="https://ax1.ptsslab.ca/list?lang=en">Self Screening</a><a class="btn" href="https://www.psychologytoday.com/ca/therapists">Find a Therapist</a><a class="btn" href="https://easecare.ca/">Ease Care</a><a class="btn" href="https://www.osicanab.ca/">OSI-CAN</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">⚡ Event-Related Stress <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-273-3134">EFAP First Call Care</a><a class="btn" href="https://botgalberta.com/">Boots on the Ground</a><a class="btn" href="https://hsaa.ca/documents/ahs-article-49">Article 49</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">💗 Grief & Loss <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-833-894-2476">Alberta Critical Incident Provincial Network</a><a class="btn" href="https://memorialgrant.ca/">Memorial Grant</a><a class="btn" href="https://homeweb.ca/en/download">Homeweb App</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">💸 Financial <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://hsaa.ca/member-resources/benefits/bursaries-scholarships/emergency-financial-assistance-fund">Emergency Funds</a><a class="btn" href="https://hsaa-online-training-hub.thinkific.com/courses/economics-101-lets-learn">Economics 101</a><a class="btn" href="https://balance.ab.bluecross.ca/welcome.aspx">AB BlueCross</a><a class="btn" href="https://homeweb.ca/app/en/resources/565328956c0ca947666caac8">Take Control of Your Money</a><a class= "btn" href="https://moneymentors.ca/financial-education/">Money Mentors<a/></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">🧠 Mental Health <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-877-303-2642">ConnexOntario</a><a class="btn" href="https://www.albertahealthservices.ca/cc/Page309.aspx">Addiction Helpline</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">⚡ Event-Related Stress <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-844-437-3247">Disaster Distress</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">💗 Grief & Loss <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-833-234-7377">Grief Share</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">💸 Financial <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://hsaa.ab.ca/">HSAA</a></div></div></section>
   <section class="section"><button class="accordion" aria-expanded="false">👪 Family & Relationships <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.pspnet.ca/en/for-families-of-psp">PSPNet Families</a><a class="btn" href="https://al-anon.ab.ca/">Al-Anon</a><a class="btn" href="https://ab.211.ca/results/?searchLocation=Edmonton&latitude=53.5499&longitude=-113.5004&sd=0&ss=Distance&searchTerms=&exct=0&topicPath=7">211 Family Services</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🧩 Addiction <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.aa.org/">AA</a><a class="btn" href="https://na.org/">NA</a><a class="btn" href="https://al-anon.ab.ca/">Al-Anon</a><a class="btn" href="tel:1-866-332-2322">Addiction Helpline</a><a class="btn" href="https://smartrecovery-canada.ca">SMART</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🧭 Career Transitions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://homeweb.ca/app/en/resources/category/permalink/lifestyle/career-development">Homeweb Career</a><a class="btn" href="https://ab.211.ca/results/?searchLocation=Edmonton&latitude=53.5499&longitude=-113.5004&sd=0&ss=Distance&searchTerms=&exct=0&topicPath=211">211 Employment</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🛡️ Bullying & Harassment <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="tel:1-855-443-5722">Abuse Help Line</a><a class= "btn" href="https://hsaa-online-training-hub.thinkific.com/courses/bullying-and-harassment-let-s-learn">HSAA Course</a><a class= "btn" href="https://ab.211.ca/#subtopic_anchor">2SLGBQTIA</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🏥 Illness & Injury <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.wcb.ab.ca">WCB Support</a><a class= "btn" href="tel:811">Health Link</a></div></div></section>
-  <section class="section"><button class="accordion" aria-expanded="false">🌱 Isolation & Loneliness <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.headspace.com/">Headspace</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">🧩 Addiction <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.addictionsanswers.ca/">Addictions Answers</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">🧭 Career Transitions <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="http://www.jobsource.ca/">JobSource</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">🛡️ Bullying & Harassment <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://bullying.org/">Bullying.org</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">🏥 Illness & Injury <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://www.albertahealthservices.ca/">AHS</a></div></div></section>
+  <section class="section"><button class="accordion" aria-expanded="false">🌱 Isolation & Loneliness <span class="chev">›</span></button><div class="panel"><div class="links"><a class="btn" href="https://ab.211.ca/">211 Alberta</a></div></div></section>
 </main>
 <footer>Tip: Add to your phone's Home Screen (Safari: Share → Add to Home Screen • Chrome: ⋮ → Add to Home Screen) Updated June 12/26</footer>
 <script>
